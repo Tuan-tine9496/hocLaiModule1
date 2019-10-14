@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Amount</label>
+<input id="sotien" type="number" />
+<label>Currency</label>
+<select id = "chooseMoney" onchange="getMoneyChoose()">
+    <option value="1">Vnđ</option>
+    <option value="2">Usd</option>
+
+
+</select>
+<label>To Currency</label>
+<select id = "choose2" onchange="getMoneyChoose()">
+    <option value="1">Vnđ</option>
+    <option value="2">Usd</option>
+
+</select>
+<input type= "button" onclick= "change()" value="convert">
+
+<script>
+    let  amount = document.getElementById("sotien");
+    function change() {
+        if(chooseMoney.value==1 && choose2.value==2) {
+            alert("số tiền của bạn là: " + amount.value/23000);
+        }else  if(chooseMoney.value==2 && choose2.value ==1) {
+            alert("số tiền của bạn là: " + amount.value*23000);
+        } else {
+            alert("số tiền của bạn là: " + amount.value);
+        }
+    }
+</script>
+</body>
+</html>

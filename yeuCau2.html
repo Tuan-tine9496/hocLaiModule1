@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nameCustomer = "Trần Anh Tuấn";
+    let idCard = "187367681";
+    let birthdayCustomer = "10/06/1994" ;
+    let emailCustomer = "tuantine94@gmail.com";
+    let addressCustomer ="Thái Hòa, Nghệ An" ;
+    let typeCustomer ="Diamond";
+    let discount = 50;
+    let numberOfAccompanying= 2;
+    let rentDay = 10;
+    let typeService ="Villa";
+    let Customer = prompt("1.Show Information Customer." +
+    "\n2. Edit Information Customer."+
+    "\n3. Show the amount to be paid after discount.");
+    switch (Customer) {
+        case "1":
+            alert("1.Name :" + nameCustomer +
+                "\n2.Id Card : " + idCard +
+                "\n3. Birthday : " + birthdayCustomer +
+                "\n4. Email : " + emailCustomer +
+                "\n5. Address : " + addressCustomer +
+                "\n6. Type Customer : " + typeCustomer +
+                "\n7. Discount : " + discount +
+                "\n8. Number Of Accompanying : " + numberOfAccompanying +
+                "\n9. Rent Day : " + rentDay +
+                "\n10. Type Service : " + typeService );
+            break;
+        case "2":
+            let ChooseEdit = prompt("1.Name :" + nameCustomer +
+                "\n2.Id Card : " + idCard +
+                "\n3. Birthday : " + birthdayCustomer +
+                "\n4. Email : " + emailCustomer +
+                "\n5. Address : " + addressCustomer +
+                "\n6. Type Customer : " + typeCustomer +
+                "\n7. Discount : " + discount +
+                "\n8. Number Of Accompanying : " + numberOfAccompanying +
+                "\n9. Rent Day : " + rentDay +
+                "\n10. Type Service : " + typeService );
+            switch (ChooseEdit) {
+                case "1":
+                    nameCustomer = prompt("Nhập tên bạn muốn đổi:" );
+                    break;
+                case"2":
+                   idCard = prompt("Nhập Số chứng minh bạn muốn thay đổi");
+                   break;
+                case "3":
+                    birthdayCustomer = prompt("Nhập ngày sinh bạn muốn thay đổi");
+
+                    break;
+                case "4":
+                    emailCustomer = prompt("Nhập email bạn muốn thay đổi");
+
+                    break;
+                case "5":
+                    addressCustomer = prompt("Nhập địa chỉ bạn muốn thay đổi");
+
+                    break;
+                case "6":
+                    typeCustomer = prompt("Nhập kiểu khách hàng bạn muốn thay đổi")
+
+                    break;
+                case "7":
+                    discount = prompt("Nhập khuyến mai bạn muốn thay đổi");
+
+                    break;
+                case "8":
+                    numberOfAccompanying = prompt("Nhập số thẻ khuyến mãi bạn muốn thay đổi");
+
+                    break;
+                case "9":
+                    rentDay = prompt("Nhập ngày thuê bạn muốn thay đổi");
+
+                    break;
+                case "10":
+                    typeService = prompt("Nhập kiểu dịch vụ bạn muốn thay đổi");
+                    break;
+                default:
+                    alert("Faill !!!");
+                    break;
+
+            }
+            alert(
+                "Information Customer" +
+                "\n Name :" + nameCustomer +
+                "\n Id Card : " + idCard +
+                "\n Birthday : " + birthdayCustomer +
+                "\n Email : " + emailCustomer +
+                "\n Address : " + addressCustomer+
+                "\n Type Customer : " + typeCustomer +
+                "\n Discount : " + discount +
+                "\n Number Of Accompanying : " + numberOfAccompanying +
+                "\n Rent Day : " + rentDay +
+                "\n Type Service : " + typeService
+            );
+            break;
+
+
+        case "3":
+            let moneyPerDay = 0;
+            if (typeService === "Villa") {
+                moneyPerDay = 500;
+            } else if (typeService === "House") {
+                moneyPerDay = 300;
+            } else {
+                moneyPerDay = 100;
+            }
+            let moneyCus = 0;
+            if (addressCustomer === "Đà Nẵng") {
+                moneyCus += 20;
+            }else if (addressCustomer === "Huế") {
+                moneyCus = 10;
+            } else if (addressCustomer === "Quảng Nam") {
+                moneyCus = 5;
+            }
+            if (rentDay > 7) {
+                moneyCus = 30;
+            }else if (rentDay <=7) {
+                moneyCus = 20;
+            }else if (rentDay >= 4)
+                moneyCus = 10;
+            if (typeCustomer === "Diamond") {
+                moneyCus = 15;
+            }else if (typeCustomer === "Platium") {
+                moneyCus = 10;
+            }else if (typeCustomer === "Gold") {
+                moneyCus = 5;
+            }else if (typeCustomer === "Silver") {
+                moneyCus = 2;
+            } else if (typeCustomer === "Member") {
+                moneyCus = 0;
+            }
+            let currentYear = new Date().getFullYear();
+            let birthday = new Date(birthdayCustomer).getFullYear();
+            let ageCustomer = currentYear - birthday;
+            if (ageCustomer >= 30 && addressCustomer === "Đà Nẵng") {
+                moneyCus = 2;
+            } else if (ageCustomer >=20 && addressCustomer === "Đà Nẵng") {
+                moneyCus = 1;
+            }
+
+
+            let totalPay = moneyPerDay * rentDay * (1 - discount / 100);
+            totalPay = totalPay - moneyCus;
+            alert("Số Tiền Khách Phải Trả Là " + totalPay);
+
+
+            break;
+        default:
+            alert("Faill !!!");
+            break;
+
+
+    }
+</script>
+
+</body>
+</html>

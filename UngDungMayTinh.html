@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id = "number1" type="number">       <input id="number2" type="number" >
+<br> <input type="button" onclick="Add()" value="Add(+)">
+<input type="button" onclick="Sub()" value="Sub(-)">
+<input type="button" onclick="Mul()" value="Mul(X)">
+<input type="button" onclick="Div()" value="Div(/)">
+<script>
+    let result ="";
+    function Add(e) {
+        result+=e;
+        document.getElementById("result").value=result;
+    }
+    function calculator() {
+        document.getElementById("result").value=eval(result);
+    }
+        
+    }
+</script>
+
+</body>
+</html>

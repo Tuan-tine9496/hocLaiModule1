@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+    <title>Kết quả học tập</title>
+
+    <script type="text/javascript">
+
+        function Xuat_diem() { //tạo hàm xuất điểm
+
+            var hang; //biến xếp hạng
+            var hocluc;	 //biến học lực
+
+            //biến đọc điểm
+            var toan = document.getElementById('Toan').value;
+            var van = document.getElementById('Van').value;
+            var anh = document.getElementById('Anh').value;
+            var tin = document.getElementById('Tin hoc').value;
+
+            //tính tổng điểm, nếu dùng "+"" thì là ghép chuỗi nên ta sẽ dùng 2 dấu "-"
+            var tong = toan - - van - - anh - - tin;
+
+            //tính điểm trung bình
+            var dtb = tong / 4;
+
+            //dùng hàm switch đặt điều kiện cho việc xếp hạng và học lực
+            switch (
+                (dtb >= 9 && dtb <= 100) ? 1 :
+                    (dtb >= 7 && dtb < 9) ? 2 :
+                        (dtb >= 5 && dtb < 7) ? 3 : 0
+                )
+
+            {
+                case 1 :
+                    hang = "A";
+                    hocluc = "great";
+                    break;
+                case 2 :
+                    hang = "B";
+                    hocluc = "good";
+                    break;
+                case 3 :
+                    hang = "C";
+                    hocluc = "Medium";
+                    break;
+                case 0 :
+                    hang = "D";
+                    hocluc = "Weak";
+                    break;
+            }
+
+
+            //xuất phiếu điểm
+            document.getElementById('HotenHS').value = document.getElementById('Hoten').value;
+            document.getElementById('LopHS').value = document.getElementById('Lop').value;
+            document.getElementById('Tong').value = tong;
+            document.getElementById('DTB').value = dtb;
+            document.getElementById('Hang').value = hang;
+            document.getElementById('Hocluc').value = hocluc;
+
+        }
+
+    </script>
+</head>
+
+<body>
+<fieldset style="width:600px">
+    <legend><b>Enter the Score</b></legend>
+    Name: <input type="text" id="Hoten"> &nbsp;&nbsp;
+    Class: <input type="text" id="Lop"> <br/><br/>
+    <table border="1">
+        <tr><td style="width: 80">Math</td><td> <input type="text" id="Toan"></td></tr>
+        <tr><td style="width: 80">Literary</td><td> <input type="text" id="Van"></td></tr>
+        <tr><td style="width: 80">English</td><td> <input type="text" id="Anh"></td></tr>
+        <tr><td style="width: 80">Information Technology</td><td> <input type="text" id="Tin hoc"></td></tr>
+    </table><br/><br/>
+    <input type="button" value="issue score cards" onClick="Xuat_diem();">
+</fieldset>
+
+<h2>Score Cards</h2>
+
+<table border="1">
+    <tr><td style="width: 150">Name</td><td><input type="text" id="HotenHS" readonly></td></tr>
+    <tr><td style="width: 150">Class</td><td><input type="text" id="LopHS" readonly></td></tr>
+    <tr><td style="width: 150">Total</td><td><input type="text" id="Tong" readonly></td></tr>
+    <tr><td style="width: 150">medium score</td><td><input type="text" id="DTB" readonly></td></tr>
+    <tr><td style="width: 150">Rank</td><td><input type="text" id="Hang" readonly></td></tr>
+    <tr><td style="width: 150">Learning power</td><td><input type="text" id="Hocluc" readonly></td></tr>
+</table>
 
 </body>
 </html>

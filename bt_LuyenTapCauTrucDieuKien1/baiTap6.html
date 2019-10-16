@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseFloat(prompt("nhập doanh thu :"))
+    let hoa;
+    if (num >= 10000000){
+        hoa = num*10/100;
+        alert("Tiền Hoa hồng là: "+ hoa + "đồng");
+    } else if (num >=5000000){
+        hoa = num*5/100;
+        alert("Tiền hoa hông là: "+ hoa + "đồng");
+    } else if (num >= 3000000){
+        hoa = num*2/100;
+        alert("Tiền hoa hồng là: "+ hoa +"đồng");
+    }else
+        alert("không có hoa hồng");
+</script>
+</body>
+</html>

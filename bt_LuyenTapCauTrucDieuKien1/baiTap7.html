@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let adm = parseFloat(prompt("nhập số phút hộ gia đình đã sử dụng"))
+    let money;
+    if (adm < 0){
+        alert("Nhập Sai, Hãy nhập lại !!");
+    }
+    if (adm > 100) {
+        money = adm*1200;
+        alert("số tiền phải thanh toán là: "+ money + "đồng");
+    }else if (adm >=80){
+        money = adm*1500;
+        alert("số tiền phải thanh toán là: "+ money + "đồng");
+    } else if (adm >= 50){
+        money = adm*1800;
+        alert("số tiền phải thanh toán là: "+ money + "đồng");
+    } else
+        money = adm*2000;
+    alert("số tiền phải thanh toán là: "+ money + "đồng");
+</script>
+</body>
+</html>

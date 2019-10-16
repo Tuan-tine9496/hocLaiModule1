@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt("Thu nhập mỗi tháng"));
+    let thue;
+    if (money < 0){
+        alert("nhập lại tiền")
+    }
+    if (money >= 80000000){
+        thue = money*35/100 - 9850000;
+        alert("sô tiền thuế là: "+ thue+"đồng");
+    }else  if (money > 52000000) {
+        thue = money*30/100 - 5850000;
+        alert("sô tiền thuế là: "+ thue+"đồng");
+    }else  if (money > 32000000){
+        thue = money*25/100 - 3250000;
+        alert("sô tiền thuế là: "+ thue+"đồng");
+    }else if (money > 18000000){
+    thue = money*20/100 - 1650000;
+    alert("sô tiền thuế là: "+ thue+"đồng");
+    }else  if (money > 8000000){
+        thue = money*15/100 - 750000;
+        alert("sô tiền thuế là: "+ thue+"đồng");
+    }else
+        thue = money*10/100 - 250000;
+    alert("sô tiền thuế là: "+ thue+"đồng");
+</script>
+</body>
+</html>

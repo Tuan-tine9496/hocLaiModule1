@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let arrName = [];
+let choose = prompt("1.Add New Customer" + "\n2.Delete Customer.");
+    switch (choose) {
+        case "1":
+            let numberCustomer = parseInt(prompt("number Customer You want add"));
+            for (var i= 0;i<numberCustomer;i++){
+                arrName.push(prompt("Enter Name Customer " + (i+1)))
+            }
+            var result = "";
+            for (var i = 0; i < arrName.length; i++){
+                result += "\n"  + (i+1) + "." + arrName[i];
+            }
+            alert(result);
+            arrName.sort();
+            result ="";
+
+            for (var i = 0; i < arrName.length; i++){
+                result += "\n"  + (i+1) + "." + arrName[i];
+            }
+            alert(result);
+           break;
+        case "2":
+            arrName [0] ="John";
+            arrName [1] ="Giacomo";
+            arrName [2] ="daLuca";
+            arrName [3] ="Tokuda";
+            arrName [4] ="Maria Ozawa";
+            arrName [5] ="Lepstontoi";
+            arrName [6] ="Mohames Ali";
+            arrName [7] ="Asparis";
+            arrName [8] ="Cristiano Ronando";
+            arrName [9] ="Leonel Messi";
+            var result = "";
+            for (var i = 0;i < arrName.length; i++) {
+                result+= "\n" +(i + 1) + "." + arrName[i];
+
+            }
+            let indexdelete = parseInt(prompt("Enter customer's name you want delete: " + result));
+            if (!indexdelete){
+                alert("please enter number" + result);
+
+            }else {
+                if (indexdelete > 10) {
+                    alert("the number not true, please try again!!");
+                } else if (indexdelete < 1) {
+                    alert("the number not true, please try again!!");
+                } else {
+                    let checkDelete = confirm("are you sure want delete??");
+                    alert(checkDelete);
+                    if (checkDelete) {
+                        arrName.splice(indexdelete - 1, 1);
+                        var resultAfterDelete = "";
+                        for (var i = 0; i < arrName.length; i++) {
+                            resultAfterDelete += "\n" + (i + 1) + ". " + arrName[i];
+
+
+                        }
+                        alert("New List Customer: " + resultAfterDelete);
+                    } else
+                        alert(result);
+                }
+            }
+            break;
+        default:
+            break;
+
+}
+
+</script>
+
+</body>
+</html>

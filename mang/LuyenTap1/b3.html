@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,4,5,12,3,14,9,0,11,7];
+    let max = arr[0];
+    let index = 0;
+    let tong = 0;
+    let tBinh = 0;
+
+    for (let n =1; n < arr.length; n++){
+        if (arr[n] > max) {
+            max = arr[n];
+            index = n;
+        }
+        tong += arr[n];
+        tBinh = tong/arr.length;
+    }
+    document.write("giá trị lớn nhất là:"+ max  +"vị trí" + index + "<br>" +"giá trị trung bình là:  " + tBinh);
+</script>
+</body>
+</html>

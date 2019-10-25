@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div>Bảng Cửu Chương</div>
+<script>
+
+    for (let i = 1; i <= 10; i++){
+        document.write("<table style='border: black 2px solid; float: left'><tr style='border: black 2px solid; float: left'>");
+        for (j = 1; j <= 10; j++){
+            let sum = i * j;
+            document.write("<td style='border: black 2px solid'>"+i + " x " + j + "=" + sum+"</td>" + "</tr>");
+
+
+
+        }
+        document.write("</table>")
+
+    }
+</script>
+
+</body>
+</html>

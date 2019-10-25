@@ -21,7 +21,8 @@
     "\n3. Show the amount to be paid after discount.");
     switch (Customer) {
         case "1":
-            alert("1.Name :" + nameCustomer +
+            alert(" Information Customer"+
+                "\n1.Name :" + nameCustomer +
                 "\n2.Id Card : " + idCard +
                 "\n3. Birthday : " + birthdayCustomer +
                 "\n4. Email : " + emailCustomer +
@@ -51,7 +52,7 @@
                    idCard = prompt("Nhập Số chứng minh bạn muốn thay đổi");
                    break;
                 case "3":
-                    birthdayCustomer = prompt("Nhập ngày sinh bạn muốn thay đổi");
+                    birthdayCustomer = prompt("Nhập ngày sinh bạn muốn thay đổi (dd/MM/YYYY)");
 
                     break;
                 case "4":
@@ -148,7 +149,7 @@
 
             let totalPay = moneyPerDay * rentDay * (1 - discount / 100);
             totalPay = totalPay - moneyCus;
-            alert("Số Tiền Khách Phải Trả Là " + totalPay);
+            alert("Số Tiền Khách Phải Trả Là " + totalPay + "$");
 
 
             break;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a1 = parseInt(prompt("nhập số 1"));
+    let a2 = parseInt(prompt("nhập số 2"));
+    let a3 = parseInt(prompt("nhập số 3"));
+    function soSanh() {
+        if (a1<a2){
+            if (a2 < a3){
+                alert("số lớn nhất là: "+a3);
+            }else {
+                alert("số lớn nhất là: "+a2);
+            }
+        }else {
+            if (a2>a3){
+                alert("số lớn nhất là: "+a1);
+            }
+        }
+
+    }
+    soSanh();
+</script>
+</body>
+</html>

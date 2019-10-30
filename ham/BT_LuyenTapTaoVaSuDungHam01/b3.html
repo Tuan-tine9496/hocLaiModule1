@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numOne = parseFloat(prompt("nhập số thứ 1"));
+    let numTwo = parseFloat(prompt("nhập số thứ 2"));
+    let tong = numOne + numTwo;
+    function tinhToan() {
+        if (numOne > numTwo){
+            alert("số thứ 1 lớn hơn số thứ 2");
+        } else if (numOne < numTwo){
+            alert("Tổng hai số là: " + tong);
+        } else {
+            alert("Hai số bằng nhau")
+        }
+
+    }
+    tinhToan();
+</script>
+</body>
+</html>

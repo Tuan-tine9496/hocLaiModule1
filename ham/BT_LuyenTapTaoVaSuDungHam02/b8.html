@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function daoMang() {
+       let arr = [3,4,1,6,8,9,0];
+       let dau = 0;
+       let cuoi = arr.length - 1;
+       while (dau < cuoi) {
+           let a = arr[dau];
+           arr[dau] = arr[cuoi];
+           arr[cuoi] = a;
+           dau++;
+           cuoi--;
+       }alert(arr);
+
+   }
+   daoMang();
+
+</script>
+</body>
+</html>

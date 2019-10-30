@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check = prompt("Enter Name");
+    let name = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+    let Constellation = [ "UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    function star() {
+        for (let i = 0; i <name.length; i++){
+            if (check===name[i]){
+                alert(Constellation[i]);
+
+            }
+        }
+    }
+    star();
+</script>
+</body>
+</html>

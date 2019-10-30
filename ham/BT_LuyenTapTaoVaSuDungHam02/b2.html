@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Bán Kính</label>
+        <input id="inputFahrenheit" type="number" placeholder="number"
+               oninput="temperatureConverter(this.value)"
+               onchange="temperatureConverter(this.value)">
+    </p>
+    <p>S: <span id="outputS"></span></p>
+    <p>V: <span id="outputV"></span></p>
+</form>
+
+<script>
+
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputS").innerHTML = valNum*valNum*3.14;
+        document.getElementById("outputV").innerHTML = valNum*2*3.14;
+    }
+
+</script>
+</body>
+</html>

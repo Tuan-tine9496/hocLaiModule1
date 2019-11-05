@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let circle = function (banKinh) {
+        this.banKinh = banKinh;
+        this.getBanKinh = function () {
+            return banKinh;
+        };
+        this.dienTich=function (banKinh) {
+            return Math.PI * banKinh * banKinh
+        }
+    };
+    let circles= new circle(5);
+    let radius = circles.getBanKinh();
+    let dienTich= circles.dienTich(radius);
+    alert("bán kính: "+radius +"\n Diện Tích: "+ dienTich);
+
+
+</script>
+
+</body>
+</html>

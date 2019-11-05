@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function phoneNumber() {
+        let numberPhone = prompt("Nhập số điện thoại của bạn theo mẫu:(xx)-(xxxxxxxxxx)");
+        let checkNum = /[(][0-9]{2}[)]-[(][0-9]{10}[)]$/;
+        if (checkNum.test(numberPhone)){
+            alert("Số điện Thoại Của Bạn Là: "+numberPhone);
+        } else
+            alert("Nhập Lại Cho Đúng Bạn Ơi!!!!");
+
+    }
+    phoneNumber();
+</script>
+</body>
+</html>

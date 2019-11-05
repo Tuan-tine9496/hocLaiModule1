@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myDate = function (day,moth,year) {
+        this.day = day;
+        this.moth = moth;
+        this.year = year;
+        this.getday= function () {
+            return this.day;
+
+        };
+        this.getmoth = function () {
+            return this.moth;
+
+        };
+        this.getyear = function () {
+            return this.year;
+
+
+        };
+        this.setday = function (day) {
+            this.day = day;
+
+        };
+        this.setmoth = function (moth) {
+            this.moth = moth;
+
+        };
+        this.setyear = function (year) {
+            this.year = year;
+
+        };
+    };
+
+
+        let date = new myDate(2,2,2007);
+        let day = date.getday();
+        let moth = date.getmoth();
+        let year = date.getyear();
+    alert(day + "/" + moth + "/" + year);
+    date.setday(10);
+    date.setmoth(10);
+    date.setyear(2019);
+    let newday = date.setday();
+    let newmoth = date.setmoth();
+    let newyear = date.setyear();
+    alert(newday + "/" + newmoth + "/" + newyear);
+
+</script>
+
+</body>
+</html>

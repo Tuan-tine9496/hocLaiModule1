@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<svg width="400" height="110">
+    <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+</svg>
+<p>
+    <p id= "dientich" type="button" value="Diện Tích">
+     <p id = "chuvi" type="button" value="Chu Vi">
+</p>
+<script>
+    let  Rectangle = function (chieurong,chieudai) {
+        this.chieurong = chieudai;
+        this.chieudai = chieudai;
+        this.getChieuRong = function () {
+            return this.chieurong;
+
+        };
+        this.getChieuDAi = function () {
+            return this.chieudai;
+
+        };
+        this.dienTich = function (chieurong,chieudai) {
+            return chieudai*chieurong;
+
+        };
+        this.chuvi = function (chieurong,chieudai) {
+            return (chieudai+chieurong)*2;
+
+        }
+    };
+    let Rectangles =  new Rectangle(3,5);
+    let chieurong = Rectangles.getChieuRong();
+    let chieudai = Rectangles.getChieuDAi();
+    let V = Rectangles.dienTich(chieurong,chieudai);
+    let s = Rectangles.chuvi(chieurong,chieudai);
+    document.getElementById("dientich").innerHTML = s;
+    document.getElementById("chuvi").innerHTML = V;
+
+</script>
+</body>
+</html>

@@ -26,7 +26,7 @@
                 editInformation();
                 break;
             case "4":
-                DeleteCustomer();
+                deleteCustomer();
                 break;
 
             default:
@@ -65,7 +65,7 @@
         function  displayInformation() {
             let result = "";
             for (var i=0;i<arrListCustomer.length; i++){
-                result += "\n" + (i + 1) + "." + "Name: " + arrListCustomer[i][0];
+                result += "\n" + (i + 1) + "." + "Name: " + arrListCustomer[i][0] +"\n"+ "Id Card: " + arrListCustomer[i][1];
             } result += "\n" + (arrListCustomer.length + 1) + ".Back to menu.";
             let chooseDisplayInfo = prompt(result);
             if (chooseDisplayInfo.toString() !== (arrListCustomer.length + 1).toString()) {
@@ -133,47 +133,74 @@
                     arrListCustomer[indexCus][0] = editInfor;
                     break;
                 case 1:
-                    arrListCustomer[indexCus][0] = editInfor;
+                    arrListCustomer[indexCus][1] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 2:
+                    arrListCustomer[indexCus][2] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 3:
+                    arrListCustomer[indexCus][3] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 4:
+                    arrListCustomer[indexCus][4] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 5:
+                    arrListCustomer[indexCus][5] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 6:
+                    arrListCustomer[indexCus][6] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 7:
+                    arrListCustomer[indexCus][7] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 8:
+                    arrListCustomer[indexCus][8] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 9:
+                    arrListCustomer[indexCus][9] = editInfor;
                     break;
-                case 0:
-                    arrListCustomer[indexCus][0] = editInfor;
+                case 10:
+                    arrListCustomer[indexCus][10] = editInfor;
                     break;
                 default:
-                    alert("Please try again!!!!")
+                    alert("Please try again!!!!");
+                    let result = "";
+                    for (var i = 0;i < arrListCustomer.length; i++) {
+                        result+= "\n" +(i + 1) + "." + arrListCustomer[i];
+                    }
 
 
 
             }
-
+            displayMainMenu();
+        }
+        function deleteCustomer() {
+            checkDeleteCustomer = true;
+            displayInformation();
 
         }
-        
+        function deleteCus(indexDel) {
+            let chooseConfirm = prompt(
+                "Are you sure delete Customer: Name: " + arrListCustomer[indexDel][0] +
+                "; Id Card: " + arrListCustomer[indexDel][1] +
+                "\n1.yes\n2.no");
+            if (chooseConfirm ==="1"){
+                arrListCustomer.splice(indexDel,1);
+                alert("Delete Complete!!");
+            }else if (chooseConfirm <1){
+                alert("Please Try Again!!!!");
+            } else if (chooseConfirm > 2){
+                alert("Please Try Again !!!");
+            }
 
-        
+            else
+            checkDeleteCustomer = false;
+            displayMainMenu();
+
+        }
+
+
+
     }
     displayMainMenu();
 </script>

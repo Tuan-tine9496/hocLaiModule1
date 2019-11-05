@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nameHuman = prompt("Enter Name's human you want for eat");
+    let klgApple =parseInt(prompt("Enter weigh's Apple you want eat"));
+    let Adam = function (male,eat,talk,understand) {
+        this.male = male;
+        this.eat = eat;
+        this.talk = talk;
+        this.understand = understand;
+        this.getMale = function () {
+            return this.male;
+        };
+
+        this.getEat = function () {
+            return this.eat;
+        };
+        this.getTalk = function () {
+            return this.talk;
+        };
+        this.getUnderstand = function () {
+            return this.understand;
+        };
+        this.setMale = function (male) {
+            this.male = male;
+        };
+        this.setEat = function (age) {
+            this.age = age;
+        };
+        this.setTalk = function (talk) {
+            this.talk = talk;
+        };
+        this.getUndersatand = function (understand) {
+            this.understand = understand;
+        };
+    };
+    let adam = new Adam("Nam",20,"Hello","apple");
+    let male = adam.getMale();
+    let eat = adam.getEat();
+    let talk = adam.getTalk();
+    let understand = adam.getUnderstand();
+    if (nameHuman === adam){
+        alert(male + eat + talk + understand);
+    }
+</script>
+</body>
+</html>

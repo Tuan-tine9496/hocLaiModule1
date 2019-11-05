@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function security() {
+        let enter = prompt("Nhập Mật Mã bảo vệ");
+        let checkEnter = /[1][0][6][9][4][A-Za-z]{2}[0-9]{1}$/;
+        if (checkEnter.test(enter)){
+            alert("Wellcome To Code Gym Company")
+        } else
+            alert("Warning!!!")
+        
+    }
+    security();
+</script>
+</body>
+</html>

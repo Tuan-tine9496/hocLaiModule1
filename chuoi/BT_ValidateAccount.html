@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Validateaccount() {
+        let text = prompt("Nhập tài khoản");
+        let checkText = /^[_a-z0-9]{6,}$/;
+        if (checkText.test(text)){
+           alert("đúng rồi")
+        } else
+            alert("nhập lại đê")
+        
+    }
+    Validateaccount();
+</script>
+</body>
+</html>

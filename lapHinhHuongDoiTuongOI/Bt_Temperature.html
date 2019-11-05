@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temperature = function (doC) {
+        this.doC = doC;
+        this.getDoC = function () {
+            return this.doC;
+        };
+        this.getDoF = function (doC) {
+            return (doC*1.8) + 32;
+            
+        };
+        this.getDoK = function (doC) {
+            return doC + 273.15;
+
+        };
+    };
+        let Temperature = new temperature(25);
+        let doC = Temperature.getDoC();
+        let f = Temperature.getDoF(doC);
+        let k =Temperature.getDoK(doC);
+        alert("Nhiệt độ F là : " + f + "\n Nhiệt độ Kenvil là : " + k);
+
+
+</script>
+
+</body>
+</html>

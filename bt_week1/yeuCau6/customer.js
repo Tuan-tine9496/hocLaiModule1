@@ -65,5 +65,20 @@ let customer = function () {
     };
     let getTypeService = function () {
         return this.typeService;
+    };
+    this.totalPays = function () {
+        let  moneyPerDays = 0;
+        if(this.getTypeServiece() === "Villa"){
+            moneyPerDays = 500;
+        }
+        else if(this.getTypeServiece() === Villa){
+            moneyPerDays = 300;
+        }
+        else{
+            moneyPerDays = 200;
+        }
+        return moneyPerDays * parseFloat(this.getRentDays())*(1 - parseFloat(this.getDiscount())/100);
+
+
     }
 };

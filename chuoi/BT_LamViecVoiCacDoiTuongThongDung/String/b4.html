@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function WordCount() {
+        let testSs = prompt("nhập 1 chuỗi bất kỳ");
+        for (let i = 0; i < testSs.length; i++){
+            if (testSs.trim().charAt(i)===" "&& testSs.charAt(i++ ) ===" "){
+                alert("please try again!!!");
+            }else
+                var dem = testSs.trim().match(/ /g);
+            alert(dem.length + 1);
+
+        }
+    }
+    WordCount();
+</script>
+</body>
+</html>

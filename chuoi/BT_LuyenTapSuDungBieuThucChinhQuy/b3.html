@@ -6,16 +6,14 @@
 </head>
 <body>
 <script>
-   // function demChuoi() {
-   //     let anyThing = prompt("nhập 1 chuỗi");
-   //     let testNguyen = /[qrtpsdfghwjklzxcvbnm]/;
-   //     for (let i=0;i<anyThing.length;i++){
-   //         if (i === testNguyen){
-   //             return i;
-   //         }else
-   //             alert(i);
-   //     }
-   // }demChuoi();
+   function demChuoi() {
+       let anyThing = prompt("nhập 1 chuỗi");
+       let testNguyen = /[qrtpsdfghwjklzxcvbnm]/g;
+       let testPhu = /[eyuioa]/g;
+       let result1 = anyThing.match(testNguyen);
+       let result2 = anyThing.match(testPhu);
+       alert("phụ âm là: "+ result2 + "\n Nguyên âm là: "+result1);
+   }demChuoi();
 </script>
 </body>
 </html>

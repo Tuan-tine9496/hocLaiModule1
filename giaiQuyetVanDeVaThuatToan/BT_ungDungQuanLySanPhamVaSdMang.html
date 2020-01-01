@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Products CRUD</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<a title="Liên kêt" href="https://www.facebook.com/tuan.tine/photos_all" target="_blank">Trang chủ</a>
+<a title="Tiêu đề liên kết" href="https://www.facebook.com/tuan.tine/" target="_blank">
+<img src="chuoi-cua-hang-tien-loi-circle-k-137206.jpg" style="..." height="300" width="1500" hr></a><p>
+<h1 style="border: red">Kho Hàng</h1>
+
+<h2>Thêm Mặt Hàng Mới</h2>
+<div class="container">
+    <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
+        <input type="text" id="add-name" placeholder="Mặt hàng mới">
+        <input type="submit" value="Thêm">
+    </form>
+</div>
+<div class="box">
+    <input type="text" id="seach" palaceholder = "Tìm kiếm mặt hàng">
+    <a href="https://www.facebook.com/tuan.tine/" target="_blank"></a>
+    <input -+ type="button" value="Tìm kiếm">
+</div>
+
+<h2>Danh Sách Các Mặt Hàng</h2>
+<table>
+    <tr>
+        <th style = "text-align: left;">Tên Mặt Hàng</th>
+        <th style = "text-align: right; color:blue" colspan="2"><p id="counter"></p></th>
+    </tr>
+    <tbody id="products">
+    </tbody>
+</table>
+<script src="quanLy.js"></script>
+
+
+<div id="spoiler" role="aria-hidden">
+    <h2>Sửa Mặt Hàng</h2>
+    <div class="container">
+        <form action="javascript:void(0);" method="POST" id="saveEdit">
+            <input type="text" id="edit-name">
+            <input type="submit" value="Sửa" /> <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

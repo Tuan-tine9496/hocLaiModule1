@@ -8,7 +8,7 @@
 <script>
     function enterClass() {
         let test = prompt("Nhập Tên Lớp Bạn Muốn Đặt");
-        let checkTest =/[C,A,P][0-9]{4}[G,H,I,K,L,M]{1}$/;
+        let checkTest =/^[CAP][0-9]{4}[GHIKLM]{1}$/;
         if (checkTest.test(test)){
             alert("ok");
         } else

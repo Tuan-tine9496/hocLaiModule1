@@ -1,84 +1,103 @@
-let customer = function () {
-    this.setNameCustomer = function (namCustomer) {
-        this.nameCustomer = namCustomer();
+let Customer = function () {
+
+    this.setNameCustomer = function (nameCustomer) {
+        this.nameCustomer = nameCustomer;
     };
+
     this.getNameCustomer = function () {
         return this.nameCustomer;
+    };
 
-    };
     this.setIdCard = function (idCard) {
-        this.idCard = idCard();
+        this.idCard = idCard;
     };
+
     this.getIdCard = function () {
         return this.idCard;
     };
-    this.setBirthday = function (birthday) {
-        this.birthday = birthday;
+
+    this.setBirthdayCustomer = function (birthdayCustomer) {
+        this.birthdayCustomer = birthdayCustomer;
     };
-    this.getBirthday = function () {
-        return this.birthday;
+
+    this.getBirthdayCustomer = function () {
+        return this.birthdayCustomer;
     };
-    this.  setEmail = function (email) {
-        this.email = email;
+
+    this.setEmailCustomer = function (emailCustomer) {
+        this.emailCustomer = emailCustomer;
     };
-    let getEmail = function () {
-        return this.email;
+
+    this.getEmailCustomer = function () {
+        return this.emailCustomer;
     };
-    let setAddress = function (address) {
-        this.address = address;
+
+    this.setAddressCustomer = function (addressCustomer) {
+        this.addressCustomer = addressCustomer;
     };
-    let getAddress = function () {
-        return this.address;
+
+    this.getAddressCustomer = function () {
+        return this.addressCustomer;
     };
-    let setTypeCustomer = function (typeCustomer) {
-        this.typeCustomer = typeCustomer
+
+    this.setTypeCustomer = function (typeCustomer) {
+        this.typeCustomer = typeCustomer;
     };
-    let getTypeCustomer = function () {
+
+    this.getTypeCustomer = function () {
         return this.typeCustomer;
     };
-    let setDiscount = function (discount) {
+
+    this.setDiscount = function (discount) {
         this.discount = discount;
     };
-    let getDiscoumt = function () {
+
+    this.getDiscount = function () {
         return this.discount;
     };
-    let setNumberOfAccompanying = function (number) {
-        this.number = number;
+
+    this.setNumberOfAccompanying = function (numberOfAccompanying) {
+        this.numberOfAccompanying = numberOfAccompanying;
     };
-    let getNumberOfAccompanying = function () {
-        return this.number;
+
+    this.getNumberOfAccompanying = function () {
+        return this.numberOfAccompanying;
     };
-    let setTypeRoom = function (typeRoom) {
+
+    this.setTypeRoom = function (typeRoom) {
         this.typeRoom = typeRoom;
     };
-    let getTypeRoom = function () {
+
+    this.getTypeRoom = function () {
         return this.typeRoom;
     };
-    let setRentDay = function (rentDay) {
-        this.rentDay = rentDay;
+
+    this.setRentDays = function (rentDays) {
+        this.rentDays = rentDays;
     };
-    let getRentDay = function () {
-        return this.rentDay;
+
+    this.getRentDays = function () {
+        return this.rentDays;
     };
-    let setTypeService = function (typeService) {
+
+    this.setTypeService = function (typeService) {
         this.typeService = typeService;
     };
-    let getTypeService = function () {
+
+    this.getTypeService = function () {
         return this.typeService;
     };
+
     this.totalPays = function () {
-        let  moneyPerDays = 0;
-        if(this.getTypeServiece() === "Villa"){
+        let moneyPerDays = 0;
+        if(this.getTypeService() === "Villa"){
             moneyPerDays = 500;
         }
-        else if(this.getTypeServiece() === Villa){
+        else if(this.getTypeService() === "Villa"){
             moneyPerDays = 300;
-        }
-        else{
+        }else{
             moneyPerDays = 200;
         }
         return moneyPerDays * parseFloat(this.getRentDays())*(1 - parseFloat(this.getDiscount())/100);
-
-
     }
 };

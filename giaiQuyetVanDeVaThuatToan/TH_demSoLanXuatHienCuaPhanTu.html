@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function count(arr,data) {
+        var counts = 0;
+        var  position = binSeach(arr,data);
+        if (position > -1){
+            ++counts;
+            for (var i = position-1; i >0;--i){
+                if (arr[i] === data){
+                    return i;
+                }
+                else {
+                    break;
+                }
+            }
+            for (var i = position + 1; i < arr.length; i++){
+                if (arr[i] === data){
+                    return i;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+        return counts
+    }
+    var num = [];
+    for (var i =0;i<100;++i){
+        num[i] = Math.floor(Math.random() * 101);
+    }
+    var  val = parseInt(prompt("enter a value to count"));
+    var retVal = count(num,val);
+    document.write("found " + retVal + "occurrences of " +val + ".");
+
+</script>
+
+</body>
+</html>
